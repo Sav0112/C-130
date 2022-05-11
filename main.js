@@ -1,5 +1,6 @@
 song = "";
 scoreLeftWrist = 0;
+scoreRightWrist = 0;
 
 rightWristX = 0;
 rightWristY = 0;
@@ -31,7 +32,9 @@ function gotPoses(results) {
     {
         console.log(results);
         scoreLeftWrist = results[0].pose.keypoints[9].score;
+        scoreRightWrist = results[0].pose.keypoints[10].score;
         console.log("scoreLeftWrist = " + scoreLeftWrist);
+        console.log("scoreRightWrist = " + scoreRightWrist);
 
         rightWristX = results[0].pose.rightWrist.x;
         rightWristY = results[0].pose.rightWrist.y;
